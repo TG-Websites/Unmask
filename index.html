@@ -1,0 +1,391 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unmask — Uncover Yourselves to Transform the World Around You</title>
+
+<meta name="description"
+content="Unmask is a community-driven platform focused on self-discovery, storytelling, meaningful conversations, emotional well-being, and authentic human connections.">
+
+<meta name="keywords"
+content="Unmask, Self Discovery, Community, Emotional Wellbeing, Storytelling, Mindfulness">
+
+<meta name="author" content="Unmask">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="/" class="navbar__logo">
+      <img src="./assets/unmaskhd.png" alt="Unmask logo">
+    </a>
+
+    <nav class="navbar__nav" id="navMenu">
+      <a href="#purpose" class="nav-link">Our Purpose</a>
+      <a href="#patna" class="nav-link">Patna Meets Patna</a>
+         <a href="#profile" class="nav-link">Enthusiast's Profile</a>
+     <a href="#" class="btn btn--gradient btn--nav" data-open-join>Join</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<!-- ============ JOIN MODAL ============ -->
+<div class="modal-overlay" id="joinModalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+    <button class="modal__close" id="joinModalClose" aria-label="Close">&times;</button>
+
+    <p class="eyebrow">Join Us</p>
+    <h2 class="modal__title" id="joinModalTitle">Become Part of Unmask</h2>
+    <p class="modal__subtitle">Fill in your details — we'll reach out with next steps.</p>
+
+    <form class="modal__form" id="joinForm">
+      <label class="field">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        <input type="text" name="name" placeholder="Full Name" required>
+      </label>
+
+      <label class="field">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </label>
+
+      <label class="field">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+      </label>
+
+      <label class="field field--select">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-9.5-9C.8 8.4 2.6 4.5 6.2 4a4.9 4.9 0 0 1 5.8 3 4.9 4.9 0 0 1 5.8-3c3.6.5 5.4 4.4 3.7 8-2.5 4.6-9.5 9-9.5 9Z"/></svg>
+        <select name="circle" required>
+          <option value="" disabled selected>Select Circle</option>
+          <option value="circle-1">Circle 1</option>
+          <option value="circle-2">Circle 2</option>
+          <option value="circle-3">Circle 3</option>
+          <option value="circle-4">Circle 4</option>
+        </select>
+      </label>
+
+      <label class="field field--select">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V10l7-5 7 5v10M9 20v-6h6v6"/></svg>
+        <select name="ward" required>
+          <option value="" disabled selected>Patna Nagar Nigam Ward</option>
+          <option value="ward-1">Ward 1</option>
+          <option value="ward-2">Ward 2</option>
+          <option value="ward-3">Ward 3</option>
+          <option value="ward-4">Ward 4</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn btn--gradient btn--full">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" style="background-image:url('./assets/bgimageofunmask.png');"></div>
+  <div class="hero__overlay"></div>
+  <div class="container hero__inner">
+    <div class="hero__content" data-reveal>
+      <p class="eyebrow eyebrow--light">A step toward self-knowledge</p>
+      <h1 class="hero__title">
+        There are<br>
+        many masks.<br>
+        There is only<br>
+        one <span class="text-gradient">you.</span>
+      </h1>
+      <p class="hero__desc">Maybe it's time to discover<br>who you already are.</p>
+      <div class="hero__actions">
+<a href="#" class="btn btn--gradient" data-open-join>Begin the Conversation</a>
+        <button class="btn btn--play" id="playBtn" aria-label="Discover our purpose">
+          <span class="play-icon">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1.5V14.5L13 8L1 1.5Z" fill="currentColor"/></svg>
+          </span>
+          <span>Discover<br>Our Purpose</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 — INVITATION ============ -->
+<section class="invitation" id="purpose">
+  <div class="container invitation__grid">
+    <div class="invitation__text" data-reveal>
+      <p class="eyebrow">The Invitation</p>
+      <h2 class="section-title">We don't give answers.<br>We create space for better questions.</h2>
+      <div class="divider"></div>
+      <p class="body-text">From childhood, we inherit beliefs, fears, ambitions, and definitions of success that were never truly our own.</p>
+      <p class="body-text">Unmask exists to help you pause, reflect, and discover who you are beneath those layers.</p>
+    </div>
+    <div class="invitation__image" data-reveal>
+      <img src="./assets/newaboutus.png" alt="Woman journaling by a window" class="invitation__img">
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — THREE WAYS ============ -->
+<section class="ways">
+  <div class="container">
+   <p class="eyebrow eyebrow--center">Three <span class="eyebrow__highlight">Ways</span> to Begin</p>
+    <div class="ways__grid">
+
+      <div class="way-card" data-reveal>
+        <div class="way-card__icon way-card__icon--purple">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v18H6.5A2.5 2.5 0 0 1 4 18.5v-13Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v18h5.5a2.5 2.5 0 0 0 2.5-2.5v-13Z"/></svg>
+        </div>
+        <h3 class="way-card__title">Explore</h3>
+        <p class="way-card__desc">Thoughtful writing on identity, relationships, purpose, fear, and the changing world.</p>
+        <a href="#" class="way-card__link way-card__link--purple">Explore Now <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <div class="way-card" data-reveal>
+        <div class="way-card__icon way-card__icon--orange">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15 14.2c2.9.4 5 2.6 5 5.8"/></svg>
+        </div>
+        <h3 class="way-card__title">Converse</h3>
+        <p class="way-card__desc">Guided conversations and community circles built for understanding — not winning.</p>
+        <a href="#" class="way-card__link way-card__link--orange">Join a Conversation <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <div class="way-card" data-reveal>
+        <div class="way-card__icon way-card__icon--green">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4-2.5-7-6-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5C19 15 16 18.5 12 21Z"/><path d="M12 21v-8"/></svg>
+        </div>
+        <h3 class="way-card__title">Contribute</h3>
+        <p class="way-card__desc">Share your reflections, stories, and experiences to help build a living archive of human understanding.</p>
+        <a href="#" class="way-card__link way-card__link--green">Share Your Story <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — PATNA MEETS PATNA ============ -->
+<section class="patna" id="patna">
+  <div class="patna__image" data-reveal>
+    <img src="./assets/lastimg.png" alt="Patna Meets Patna" class="patna__img">
+  </div>
+  <div class="patna__content" data-reveal>
+    <div class="patna__content-inner">
+      <p class="eyebrow">Chapter One</p>
+      <h2 class="section-title">Patna Meets Patna</h2>
+      <p class="body-text">A space where people from Patna come together through honest conversations, shared experiences, and meaningful connections.</p>
+      <a href="#" style="color: black;" class="btn btn--outline">Learn More <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+<!-- ============ SECTION — ENTHUSIAST'S PROFILE ============ -->
+<section class="profile" id="profile">
+  <div class="profile__glow" aria-hidden="true"></div>
+  <div class="container profile__grid">
+
+    <div class="profile__image" data-reveal>
+      <div class="profile__frame">
+        <img src="./assets/Enthusiast's Profile.jpeg" alt="Vishal — Founder, Where Patna Meets Patna" class="profile__img">
+      </div>
+      <div class="profile__badge">
+        <span class="profile__badge-name">Vishal</span>
+        <span class="profile__badge-role">Founder, Where Patna Meets Patna</span>
+      </div>
+    </div>
+
+    <div class="profile__content" data-reveal>
+      <p class="eyebrow">Enthusiast&rsquo;s Profile</p>
+      <h2 class="section-title">A Life of Questions,<br>Not Conformity</h2>
+      <div class="divider"></div>
+
+      <div class="profile__bio" id="profileBio">
+        <span class="profile__quotemark" aria-hidden="true">&ldquo;</span>
+        <p class="body-text">Vishal's journey has been anything but conventional. By society's standards, it may appear to be a story of repeated failures. To him, however, it has been a continuous process of experimentation, questioning, learning, and rediscovering life.</p>
+
+        <p class="body-text">As a young student, he aspired to become an engineer&mdash;not for the prestige attached to the profession, but to solve real-world problems. Yet, at every stage, he found himself confronting a social, economic, and political system that often rewards conformity over curiosity, compliance over creativity, and competition over compassion.</p>
+
+        <p class="body-text profile__more-text">Over the years, one conviction became increasingly clear: human freedom is the foundation of human flourishing. A truly vibrant society is one in which every individual is free to explore their potential, pursue multiple interests, and contribute meaningfully&mdash;not because survival demands it, but because creativity, curiosity, and love naturally seek expression.</p>
+
+        <p class="body-text profile__more-text">Vishal never found fulfillment in an education system that equates memorization with wisdom. To him, knowledge has value only when it deepens understanding, expands compassion, and improves the lives of others.</p>
+
+        <p class="body-text profile__more-text">To earn a livelihood, he has worked with several government and private organizations in contractual roles. These experiences exposed him to a deeper and more pervasive reality&mdash;a silent sense of suffocation that many people carry within themselves, regardless of their social or economic position.</p>
+
+        <p class="body-text profile__more-text">This realization led him towards an intensive exploration of philosophy, psychology, history, and the study of human nature. Gradually, he arrived at a simple yet profound understanding: lasting social transformation cannot be imposed from above; it must emerge from the collective awakening of human consciousness.</p>
+
+        <blockquote class="profile__quote profile__more-text">
+          It is from this understanding that <strong>Where Patna Meets Patna</strong> was born&mdash;an invitation to pause, reflect, question, connect, and co-create.
+        </blockquote>
+
+        <p class="body-text profile__more-text">For Vishal, this is not merely a project. It is an experiment in rebuilding community, rekindling hope, and demonstrating that meaningful social change begins when ordinary people choose to think together, care together, and act together.</p>
+      </div>
+
+      <button class="profile__toggle" id="profileToggle">
+        Read Full Story <span aria-hidden="true">&darr;</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ SECTION 5 — UNDERSTANDING PRECEDES TRANSFORMATION ============ -->
+<section class="understanding">
+  <div class="container">
+    <div class="understanding__badge" data-reveal>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+    </div>
+    <h2 class="understanding__title" data-reveal>Understanding Precedes Transformation.</h2>
+
+    <div class="understanding__grid" data-reveal>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        <span>Know Yourself</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4A8.9 8.9 0 0 1 8 19l-4 1 1-3.6a8.4 8.4 0 0 1-1.5-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg>
+        <span>Honest Dialogue</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M12.5 14.7c.9-.6 2.1-1 3.5-1 3.3 0 6 2.2 6 5.5"/></svg>
+        <span>Collective Growth</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-9.5-9C.8 8.4 2.6 4.5 6.2 4a4.9 4.9 0 0 1 5.8 3 4.9 4.9 0 0 1 5.8-3c3.6.5 5.4 4.4 3.7 8-2.5 4.6-9.5 9-9.5 9Z"/></svg>
+        <span>A Better Society</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — LIVING ARCHIVE ============ -->
+<section class="archive">
+  <div class="container">
+    <p class="eyebrow eyebrow--center">Living Archive</p>
+
+    <div class="archive__grid">
+      <div class="archive-card" data-reveal>
+        <span class="archive-card__quote">&ldquo;</span>
+        <p class="archive-card__text">What if the life I'm living isn't truly mine?</p>
+        <p class="archive-card__meta">— Aarav, 24<br>Bengaluru</p>
+      </div>
+      <div class="archive-card" data-reveal>
+        <span class="archive-card__quote">&ldquo;</span>
+        <p class="archive-card__text">Why do I feel alone even when I'm surrounded by people?</p>
+        <p class="archive-card__meta">— Mehak, 29<br>Delhi</p>
+      </div>
+      <div class="archive-card" data-reveal>
+        <span class="archive-card__quote">&ldquo;</span>
+        <p class="archive-card__text">I'm no longer afraid of failure — I'm afraid of never trying.</p>
+        <p class="archive-card__meta">— Rishabh, 21<br>Patna</p>
+      </div>
+      <div class="archive-card archive-card--cta" data-reveal>
+        <p class="archive-card__text">Letters, stories and reflections from our community.</p>
+        <a href="#" class="archive-card__more">
+          Explore More
+          <span class="archive-card__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="archive__footer">
+      <a href="#" class="btn btn--outline-dark">View All Stories <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 7 — NEWSLETTER CTA ============ -->
+<section class="newsletter" id="join">
+  <div class="container newsletter__grid">
+    <div class="newsletter__text" data-reveal>
+      <h2 class="newsletter__title">The greatest conversation<br>you'll ever have&hellip;<br>is the one you have<br><span class="text-gradient">with yourself.</span></h2>
+    </div>
+
+    <form class="newsletter__form" data-reveal id="newsletterForm">
+      
+      <label class="field">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <input type="email" placeholder="Your email address" required>
+      </label>
+      <label class="field">
+        <svg class="field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4A8.9 8.9 0 0 1 8 19l-4 1 1-3.6a8.4 8.4 0 0 1-1.5-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg>
+        <input type="text" placeholder="What's one question you've been carrying lately? (Optional)">
+      </label>
+      <button type="submit" class="btn btn--gradient btn--full">Join Unmask</button>
+      <p class="newsletter__note">We respect your privacy. No spam. Ever.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="./assets/unmasklogo1.png" alt="Unmask logo" class="footer__logo">
+      <p class="footer__tagline">Uncover Yourselves to Transform the World Around You.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#purpose">Our Purpose</a></li>
+        <li><a href="#profile">Enthusiast's Profile</a></li>
+        <li><a href="#">Conversations</a></li>
+        <li><a href="#">Living Archive</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#patna">Patna Meets Patna</a></li>
+        <li><a href="#">Community Circles</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__col--social">
+      <h4>Follow Us</h4>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4.5c0-1.4 1-2.5 2.5-2.5S17 11.1 17 12.5V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M11 9.5v5l4-2.5-4-2.5Z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; 2026 Unmask. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

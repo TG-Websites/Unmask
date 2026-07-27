@@ -289,10 +289,14 @@ body{
 .hero__title{
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.2rem, 1.4rem + 3.4vw, 3.8rem);
+   font-size: clamp(1.8rem, 1.1rem + 2.8vw, 3.2rem);
   line-height: 1.08;   /* was 1.12 — slightly tighter */
   color: var(--c-white);
   letter-spacing: -.01em;
+}
+.hero__title-question{
+  display: block;
+  font-weight: 500;
 }
 .hero__desc{
   margin-top: 16px;    /* was 22px */
@@ -461,7 +465,8 @@ body{
 .patna{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #E7E6E3;      /* smoky/grey tone matching the reference */
+  background: #E7E6E3; 
+       /* smoky/grey tone matching the reference */
 }
 .patna__image{
   overflow: hidden;

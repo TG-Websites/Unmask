@@ -164,3 +164,19 @@ if (profileBio && profileToggle) {
       : 'Read Full Story <span aria-hidden="true">&darr;</span>';
   });
 }
+
+
+
+
+// patna meets patna
+
+const patnaToggle = document.getElementById('patnaToggle');
+const patnaBio = document.getElementById('patnaBio');
+
+patnaToggle.addEventListener('click', () => {
+  const expanded = patnaBio.classList.toggle('is-expanded');
+  patnaToggle.classList.toggle('is-expanded', expanded);
+  patnaToggle.innerHTML = expanded
+    ? 'Show Less <span aria-hidden="true">&uarr;</span>'
+    : 'Read More <span aria-hidden="true">&darr;</span>';
+});

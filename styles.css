@@ -477,9 +477,35 @@ body{
   display: flex;
   align-items: center;
 }
-.patna__content-inner{ padding: 60px; max-width: 560px; }
-.patna .body-text{ max-width: 42ch; }
+.patna__content-inner{ padding: 60px; max-width: 100%; }
+.patna .body-text{
+  max-width: none;      /* or e.g. 70ch if you just want it wider, not unlimited */
+  overflow-wrap: break-word;
+  font-weight: normal;
+}
 .patna .btn{ margin-top: 26px; }
+.patna__bio{
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.patna__bio .body-text{
+  max-width: none; /* let it use full column width, per your earlier question */
+  overflow-wrap: break-word;
+  font-weight: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;      /* shows 6 lines before truncating */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.patna__bio.is-expanded .body-text{
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
+}
+.patna .lead-in{
+  font-weight: bold;
+}
 
 /* ==========================================================
    SECTION 5 — UNDERSTANDING PRECEDES TRANSFORMATION
